@@ -12,6 +12,8 @@
       <copyright>D34dmeat</copyright>
       <email>d34dmeat.gmail.com</email>
       <type>html</type>
+	  <url>http://www.voddler.com/en/</url>
+      <controller>http://d34dmeat.github.com/Boxee-Voddler-Addon/controller.js</controller>
       <platform>all</platform>
       <minversion>0.9.14</minversion>
    </app>

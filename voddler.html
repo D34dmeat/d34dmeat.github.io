@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <title>Boxee Voddler addon in html5</title>
+        <!--
+<link type="text/css" rel="stylesheet" href="voddler.css"/>
+-->
+       
+<style type="text/css" media="screen">
+        	html { background: transparent url('/media/background.jpg') repeat-x; margin: 0; padding: 0; }
+        
+</style>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    </head>
+    <body>
+    	<header>
+    		<h2>Voddler for the Boxee Box</h2>
+    	</header> 
+	    <nav><table width="800" border="0" cellspacing="1" cellpadding="1">
+    <tr>
+        <td>hej
+        </td>
+        <td>sdfs
+        </td>
+        <td>sdfsd
+        </td>
+        <td>sdfs
+        </td>
+        <td>sdfs
+        </td>
+    </tr>
+</table>
+</nav> 
+	    <article> 
+	        <section> 
+	          <div id="mainlist"></div> 
+			  <div id="images"></div>
+	        </section> 
+	    </article> 
+	    <aside></aside> 
+	    <footer></footer>
+    	
+    	
+    	
+		
+    	<!--
+<script>
+    		document.getElementById("2").innerHTML=(JSON.parse(url="http://api.voddler.com/metaapi/browse/1?type=movie&category=free&offset=0&count=10"));
+	
+	
+	myData = JSON.parse(url="http://api.voddler.com/metaapi/browse/1?type=movie&category=free&offset=0&count=10", function (key, value) {
+    var type;
+    if (value && typeof value === 'object') {
+        type = value.type;
+        if (typeof type === 'string' && typeof window[type] === 'function') {
+            return new (window[type])(value);
+        }
+    }
+    return value;
+});
+var mydoc = document.getElementById("1");
+mydoc.innerHTML=$.getJSON("http://api.voddler.com/metaapi/browse/1?type=movie&category=free&offset=0&count=10");
+
+</script>
+-->
+
+<!--
+<script>
+	/*
+if (window.XMLHttpRequest)
+{
+   var oReq = new XMLHttpRequest();
+   if (oReq) {
+   		oReq.overrideMimeType("application/json");
+      oReq.open("GET", "http://api.voddler.com/metaapi/browse/1?type=movie&category=free&offset=0&count=10");
+      var target;
+	  oReq.onload  = function() {target=JSON.parse(oReq.ResponseHeader)};
+	  oReq.send();
+	  sHeaders = oReq.getAllResponseHeaders();
+	  
+System.Text.Encoding enc=System.Text.Encoding.ASCII;
+	  String myString=enc.GetString(oReq.responseBody);
+
+      alert(oReq.statusText + "skjärt "+ sHeaders
+ 
++ JSON.parse(oReq.responseBody)
+
+);*/
+</script>
+
+-->
+
+<!--
+<script>
+var target;
+		var s = document.createElement('script');
+	s.src = 'http://api.voddler.com/metaapi/browse/1?type=movie&category=free&offset=0&count=10';
+	s.onload = function() {
+	
+	
+
+
+target = $.parseJSON(s);
+
+
+};
+var temp = $.getJSON(s,function(lolle){alert(lolle);});
+s.type = 'text/javascript';
+if(document.getElementsByTagName('head').length > 0)
+    document.getElementsByTagName('head')[0].appendChild(s);
+	  var temp = $.parseJSON(s);
+	  var mydoc = document.getElementById('images');
+	  
+mydoc.innerHTML = "<p>shitface</p>"+s.data;
+
+</script>-->
+<!--
+<script>
+
+
+
+function loadJSON(url) {
+  var headID = document.getElementsByTagName("head")[0];         
+  var newScript = document.createElement('script');
+      newScript.type = 'text/javascript';
+      newScript.src = url;
+	  
+  headID.appendChild(newScript);
+  /*
+processJSON(newScript.);
+*/
+}function processJSON(feed){
+  document.writeln(feed.title+'<BR>');
+  for(i=0; i<feed.channel.items.length; i++) {
+     document.write("<a href='"+feed.data.videos[i].title+"'>");
+     document.writeln(feed.data.videos[i].title+"</a><BR>");
+  }
+}
+
+
+loadJSON('http://api.voddler.com/metaapi/browse/1?type=movie&category=free&offset=0&count=10');
+	  /*
+$.each(temp.data.videos, function(i,item){
+      $("<img/>").attr("src", item.screenshots.count[1].url).appendTo("#images");
+	  });
+*/
+   
+</script>-->
+<!--
+<script>
+
+var ullbert="";
+
+    $.getJSON("http://api.voddler.com/metaapi/browse/1?type=movie&category=free&offset=0&count=10&jsoncallback=?", function(data){
+  ullbert = JSON.parse(data);
+  data = JSON.parse(data);
+  $.each(data.data.videos, function(i,item){
+    $("<img/>").attr("src", screenshots[0].url).appendTo("#images")
+      .wrap("<p" + item.originalTitle + "</p>");
+    if ( i == 3 ) return false;
+  });
+}).success(function() { alert("ullbert second success");
+	$.each(data.data.videos, function(i,item){
+      $("<img/>").attr("src", item.screenshots.count[1].url).appendTo("#images");
+      if ( i == 8 ) return false;
+    }); })
+	.error(function(data,statustext,object) { alert("ullbert error "+data);
+	data =$.parseJSON(data);})
+	.complete(function(data, textstatus) { alert("ullbert complete " + textstatus); });
+  
+
+</script>
+<script>
+	
+$.ajax({
+		url: "http://api.voddler.com/metaapi/browse/1",
+	jsonp: false,
+		
+/*
+jsonpCallback: "callme",
+*/
+		cache: false,
+		accepts: "gzip",
+		contentType: "application/json",
+		dataType: "json",
+		
+dataFilter: function(data, type)
+		{
+
+			var temp = "callme("+data+")"
+
+			return temp;
+
+		}
+
+
+		 });
+
+	$.get("http://api.voddler.com/metaapi/browse/1?",
+	{
+		type: "movie",
+		category: "free",
+		offset: "0",
+		count: "10"
+	},function(json){
+		
+		$.each(json.data.videos, function(i,item){
+      $("<img/>").attr("src", item.screenshots.count[1].url).appendTo("#images");
+      if ( i == 8 ) return false;
+    });
+		
+	})
+	.success(function() { alert("second success");
+	$.each(data.data.videos, function(i,item){
+      $("<img/>").attr("src", item.screenshots.count[1].url).appendTo("#images");
+      if ( i == 8 ) return false;
+    }); })
+	.error(function() { alert("error ");})
+	.complete(function(data, textstatus) { alert("complete " + textstatus); });
+	
+	$.get("http://api.voddler.com/metaapi/browse/1?type=movie&category=free&offset=0&count=10", function(data){
+   alert("Data Loaded: " + data);
+ });
+</script>
+
+--><script>
+$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
+  {
+    tags: "cat",
+    tagmode: "any",
+    format: "json"
+  },
+  function(data) {
+  	alert("success");
+    $.each(data.items, function(i,item){
+      $("<img/>").attr("src", item.media.m).appendTo("#images");
+      if ( i == 8 ) return false;
+    });
+  });</script>
+  
+
+<script>
+var rabbit = $.getJSON("http://api.voddler.com/metaapi/browse/1?type=movie&category=free&offset=0&count=10&callback=?",
+function(data) {
+   var items = [];
+   alert("voddler success"+$.stringifyJSON(data));
+
+  })
+  
+  
+/*
+.complete(function(data, textstatus) { alert("complete " +textstatus+ data.responseText); })
+*/
+;
+rabbit.complete(function(myjson) {
+	var lollo = JSON.stringify(myjson); 
+
+alert("second success"+ myjson.getAllResponseHeaders()+ lollo); 
+
+});
+
+</script>
+<?php
+    // file url: http://localhost/remote-json-proxy.php
+    $url = 'http://mobile.icta.lk/services/railwayservice/getAllLines.php';
+    $qsa = '?';
+    foreach($_GET as $n => $v) {
+        if($n != 'callback') {
+            $qsa .= '&' . $n . '=' . rawurlencode($v);
+        }
+    }
+    $json = file_get_contents($url . $qsa);
+    echo sprintf('%s(%s);', $_GET['callback'], $json);
+?>
+
+<script type='text/javascript'>
+    $.getJSON('remotejson.php?type=movie&category=free&offset=0&count=10&callback=?', function(data) {
+        console.log(data);
+		alert("remotejson success"+ data);
+    })
+</script>
+ 
+ <script type='text/javascript'>
+    $.getJSON('voddler.php?type=movie&category=free&offset=0&count=10', function(data) {
+        console.log(data);
+		alert("voddler.php success"+ data);
+    })
+</script>
+
+
+	
+
+
+		</body>
+</html>

@@ -1,6 +1,6 @@
 <?php
     // file url: http://localhost/remote-json-proxy.php
-    $url = 'http://api.voddler.com/metaapi/browse/';
+    $url = 'http://api.voddler.com/metaapi/browse/1';
     $qsa = '?';
     foreach($_GET as $n => $v) {
         if($n != 'callback') {

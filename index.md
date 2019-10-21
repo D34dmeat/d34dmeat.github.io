@@ -7,4 +7,4 @@ layout: default
 ---
 
 
-{{ppage.title}}
+{{ page.title }}

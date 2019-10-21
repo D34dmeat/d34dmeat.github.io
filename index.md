@@ -1,8 +1,4 @@
 ---
----
-
-
----
 title: hello
 layout: default
 ---
@@ -10,4 +6,5 @@ layout: default
 
 {{ page.title }}
 
-## i was trying to add some content
+## i was trying 
+to add some content

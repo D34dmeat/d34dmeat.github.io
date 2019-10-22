@@ -4,8 +4,8 @@ layout: page
 <!DOCTYPE html>
 <html>
   <body>
-    {% for page in site.pages%}
-    {{ page.title}}
+    {% for page in site %}
+    {{ page.title }}
     {% endfor %}
      {{ content }}
   </body>

@@ -1,0 +1,12 @@
+---
+layout: page
+---
+<!DOCTYPE html>
+<html>
+  <body>
+    {% for page in site.pages %}
+    {{ page.title }}, {{ page.created }}, {{ page.url }}
+    {% endfor %}
+     {{ content }}
+  </body>
+</html>

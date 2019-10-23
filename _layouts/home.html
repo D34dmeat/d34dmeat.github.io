@@ -2,7 +2,7 @@
 layout: default
 ---
 <nav>
-    <ul>
+    <ul class="navigation">
         {% for page in site.pages %}
         <li>
             <a href="{{page.url}}">{{page.title}}</a>
@@ -10,6 +10,7 @@ layout: default
         {%endfor%}
     </ul>
 </nav>
+<div class="wrapper"></div>
 {{ content }}
 <ul class="myposts">
 {% for post in site.posts %}
@@ -18,3 +19,5 @@ layout: default
     </li>
 {% endfor %}
 </ul>
+
+

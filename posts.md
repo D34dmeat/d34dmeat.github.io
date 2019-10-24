@@ -4,7 +4,7 @@ layout: page
 ---
 
 {% for page in site.pages %}
-{% if page.title and ppage.title!= "posts"%}
+{% if page.title and page.title!= "posts"%}
 {{ page.title }}
 
 {{ page.content }}

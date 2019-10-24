@@ -4,7 +4,7 @@ layout: page
 ---
 
 {% for page in site.pages %}
-{% if page.title %}
+{% if page.title and page.url != ""pages.md"%}
 {{ page.content }}
 {%endif%}
 {%endfor%}

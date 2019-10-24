@@ -5,7 +5,10 @@ layout: page
 
 {% for page in site.pages %}
 {% if page.title and page.title != "posts"%}
-# {{ page.title }}  {{ page.created }}
+# {{ page.title }}  
+--
+{{ page.created }}
+
 {{ page.content }}
 {%endif%}
 {%endfor%}

@@ -1,19 +1,9 @@
 ---
-title: the start page
+title: home
 layout: home
 ---
 
 
+## Blog
 
-
-## i was trying 
-to add some content
-
-## while this
-isn't really what im trying to do
-how about some code
-
-```
-this migt be the wrong way
-
-```
+this is where i'll try to add some content

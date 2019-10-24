@@ -3,4 +3,8 @@ title: posts
 layout: page
 ---
 
-{{ site.pages }}
+{% for page in site.pages %}
+{% if page.title %}
+{{ page }}
+{%endif%}
+{%endfor%}

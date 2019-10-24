@@ -4,9 +4,9 @@ layout: default
 <nav>
     <ul class="navigation">
         {% for page in site.pages %}
-        <li>
+        <ul>
             <a href="{{page.url}}">{{page.name}}</a>
-        </li>
+        </ul>
         {%endfor%}
     </ul>
 </nav>

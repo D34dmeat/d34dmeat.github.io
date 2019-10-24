@@ -3,4 +3,4 @@ title: posts
 layout: page
 ---
 
-{{ ssite.pages }}
+{{ site.pages }}

@@ -5,12 +5,14 @@ layout: default
     <ul class="navigation">
         {% for page in site.pages %}
         <li>
-            <a href="{{page.url}}">{{page.title}}</a>
+            <a href="{{page.url}}">{{page.name}}</a>
         </li>
         {%endfor%}
     </ul>
 </nav>
-<div class="wrapper"></div>
+<div class="wrapper">
+
+</div>
 {{ content }}
 <ul class="myposts">
 {% for post in site.posts %}

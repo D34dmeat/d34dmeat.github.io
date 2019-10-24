@@ -1,6 +1,6 @@
 ---
 title: the start page
-layout: default
+layout: home
 ---
 
 

@@ -3,9 +3,12 @@ layout: default
 ---
 
 <div class="wrapper">
-{{ site.pages }}
+
 </div>
 {{ content }}
+
+
+
 <ul class="myposts">
 {% for post in site.pages %}
     <ul><a href="{{ post.url }}">{{ post.title}}</a>

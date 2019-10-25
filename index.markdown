@@ -5,3 +5,4 @@
 layout: home
 title: this page
 ---
+[Post](posts.md)

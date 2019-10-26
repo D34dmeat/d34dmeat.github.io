@@ -9,6 +9,7 @@ layout: home
 [about](/about/)
 [home](/home/)
 
+this seem to be the landing page befor index.md
 before the content
-{{ content }}
+{{ site.pages.content }}
 after the content

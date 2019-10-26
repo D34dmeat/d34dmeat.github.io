@@ -1,8 +1,9 @@
 ---
-title: home
+title: Home
 layout: home
 permalink: /home/
+sidebar: /nav/
 ---
 
 Welcome
-{{ site.pages.latest.content }}
+{{ site.pages.content }}

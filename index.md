@@ -13,7 +13,3 @@ Welcome
 
 {% endif %}
 {%endfor%}
-{% for page in site.category %}
-{{ page.category }}
-[{{ page.title }]({{ page.url}})
-{%endfor%}

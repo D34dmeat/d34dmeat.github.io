@@ -6,4 +6,10 @@ sidebar: /nav/
 ---
 
 Welcome
-{{ site.collections}}
+{% for page in  site.pages%}
+{% if page.dir = "/posts/" %}
+
+{{ page.content }}
+
+{% endif %}
+{%endfor%}

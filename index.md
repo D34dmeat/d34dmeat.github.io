@@ -4,5 +4,5 @@ layout: home
 permalink: /home/
 ---
 
-These are some pages
+Welcome
 {{ site.pages.latest.content }}

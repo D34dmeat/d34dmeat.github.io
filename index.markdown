@@ -6,3 +6,5 @@ layout: home
 title: this page
 ---
 [Post](posts.md)
+[bar](/bar/)
+[home](/home/)

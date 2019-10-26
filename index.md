@@ -1,9 +1,8 @@
 ---
 title: home
 layout: home
-permalink: home
+permalink: /home/
 ---
-
 
 ## Blog
 

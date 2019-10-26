@@ -2,9 +2,10 @@
 title: posts
 layout: page
 ---
+## posts
 
 {% for page in site.pages %}
-{% if page.title and page.title != "posts" and page.title != "About"%}
+{% if page.title and page.title != "posts" and page.title != "about"%}
 
 
 ---

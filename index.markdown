@@ -5,8 +5,10 @@
 layout: home
 
 ---
-[Posts](posts.md)
-[About](/about/)
-[Home](/home/)
+[posts](posts.md)
+[about](/about/)
+[home](/home/)
 
+before the content
 {{ content }}
+after the content

@@ -10,8 +10,8 @@ layout: home
 
 
 {% for cat in site.category %}
-{{ cat }}
-{% for page in site.category: cat %}
+{{ cat.name }}
+{% for page in site.category %}
 [{{ page.title }]({{ page.url}})
 {%endfor%}
 {%endfor%}

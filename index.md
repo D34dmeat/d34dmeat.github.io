@@ -5,3 +5,4 @@ permalink: /home/
 ---
 
 These are some pages
+{{ site.pages.latest}}

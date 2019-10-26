@@ -3,8 +3,8 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: this page
+
 ---
 [Post](posts.md)
-[bar](/bar/)
+[About](/about/)
 [home](/home/)

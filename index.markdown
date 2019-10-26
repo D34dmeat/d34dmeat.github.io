@@ -5,8 +5,11 @@
 layout: home
 
 ---
-[Posts](posts.md)
-[About](/about/)
-[Home](/home/)
+[posts](posts.md)
+[about](/about/)
 
-{{ content }}
+
+this seem to be the landing page before index.md
+
+{{ site.pages.posts.content }}
+

@@ -9,7 +9,9 @@ layout: home
 [about](/about/)
 
 
-this seem to be the landing page before index.md
-
-{{ site.pages.posts.content }}
-
+{% for cat in site.category %}
+{{ cat }}
+{% for page in site.category: cat %}
+[{{ page.title }]({{ page.url}})
+{%endfor%}
+{%endfor%}

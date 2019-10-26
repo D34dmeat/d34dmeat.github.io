@@ -9,7 +9,7 @@ Welcome
 {% for page in  site.pages%}
 {% if page.short %}
 
-{{ page.content }}
-
+{{ page.title }}
+{{ page.short }}
 {% endif %}
 {%endfor%}

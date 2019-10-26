@@ -6,4 +6,4 @@ sidebar: /nav/
 ---
 
 Welcome
-{{ site.posts }}
+{{ site.collections}}

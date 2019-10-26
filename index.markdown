@@ -11,5 +11,5 @@ layout: home
 
 this seem to be the landing page before index.md
 before the content
-{{ site.pages.content }}
+{{ site.pages.posts.content }}
 after the content

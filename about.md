@@ -4,6 +4,8 @@ title: about
 permalink: /about/
 ---
 
-This is a minimal journal/blog that i'm planning on extending later on
+This is a minimal journal/blog that i'm planning on extending later on.
 
-[Page](http://github.com/d34dmeat/)
+mabe i'll start with some winapi in rust
+
+[my github](http://github.com/d34dmeat/)

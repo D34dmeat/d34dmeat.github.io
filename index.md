@@ -7,7 +7,7 @@ sidebar: /nav/
 
 Welcome
 {% for page in  site.pages%}
-{% if page.dir = "/posts/" %}
+{% if page.short %}
 
 {{ page.content }}
 

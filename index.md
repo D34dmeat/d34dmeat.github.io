@@ -11,5 +11,6 @@ Welcome
 
 {{ page.title }}
 {{ page.short }}
+
 {% endif %}
 {%endfor%}

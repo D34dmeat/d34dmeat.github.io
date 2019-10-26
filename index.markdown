@@ -5,6 +5,8 @@
 layout: home
 
 ---
-[Post](posts.md)
+[Posts](posts.md)
 [About](/about/)
-[home](/home/)
+[Home](/home/)
+
+{{ content }}

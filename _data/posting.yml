@@ -1,1 +1,4 @@
-post: this is some random stuff
+post: 
+     name: nisse
+     data: olle
+     

@@ -1,10 +1,10 @@
-- post: 
-name: "bingen"
-data: bcv
-     members:
-     - name: bengt
+-post: 
+  name: "bingen"
+  data: bcv
+     -members:
+       name: bengt
        desc: greedy bastard
        
-     - name: ville
+       name: ville
        desc: stamp collector
      

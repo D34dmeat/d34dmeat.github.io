@@ -1,4 +1,10 @@
-post: 
+- post: hello
      name: nisse
      data: olle
+     members:
+     - name: bengt
+       desc: greedy bastard
+       
+     - name: ville
+       desc: stamp collector
      

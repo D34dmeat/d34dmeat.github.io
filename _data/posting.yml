@@ -1,6 +1,6 @@
-- post: hello
-     named: nisse
-     data: olle
+- post: 
+name: "bingen"
+data: bcv
      members:
      - name: bengt
        desc: greedy bastard

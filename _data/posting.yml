@@ -1,5 +1,5 @@
 - post: hello
-     name: nisse
+     named: nisse
      data: olle
      members:
      - name: bengt

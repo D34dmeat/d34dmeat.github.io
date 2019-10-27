@@ -56,6 +56,11 @@ xhr.send(data);
 <div ng-app="app">
   <div ng-controller="MainController">
     <pre>{{data | json}}</pre>
+    <form action="/php/posting.php" method="post">
+         Name: <input type="text" name="name"><br>
+         Data: <input type="text" name="data"><br>
+      <input type="submit">
+    </form>
     <button ng-click="parse()">Parse YAML</button>
     <div id="editor"></div>
   </div>

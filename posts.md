@@ -13,7 +13,7 @@ permalink: /posts/
 
 [{{page.title}}]({{page.url}})  {{ page.created}}
 
-{{ page.content | truncate: 120}}
+{{ page.content }}
 
 
 {% endif %}

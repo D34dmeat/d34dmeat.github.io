@@ -1,3 +1,4 @@
+<?php
 if(!empty($_POST['data'])){
 $data = test_input($_POST['data']);
 $name = test_input($_POST['name']);
@@ -15,3 +16,4 @@ function test_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+?>

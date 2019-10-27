@@ -1,0 +1,56 @@
+<script >
+angular.module('app', [])
+  .controller('MainController', ['$scope', MainController]);
+
+var YAML_KEY_PATTERN = /\S+:/
+var YAML_COMMENT_PATTERN = /^#/
+
+function leftPad(count, pad) {
+  var _pad = pad || ' ';
+  var _result = '';
+  for (var i = 0; i < count; i++) {
+    _result += _pad;
+  }
+  return _result;
+}
+
+function MainController($scope) {
+  $scope.data = {};
+  var cm = CodeMirror(document.getElementById('editor'), {
+    lineNumbers: true,
+    mode: {
+      name: "yaml",
+      globalVars: true
+    }
+  });
+  cm.setValue("# Comment test\nk1:\n# Comment1\nk2:\n- a: 1\n  aa: true\n# Comment2\n- b: 2\n  bb: true\n# Comment3\n- c: 3\n  cc: true\n# Comment4");
+  $scope.parse = function() {
+    try {
+      var _yamlString = cm.getValue();
+      var result = '';
+      _yamlString.split('\n').forEach(function(line, idx, array) {
+        if (YAML_COMMENT_PATTERN.test(line)) {
+          var pad = 0
+          if (idx > 0) {
+            pad = array[idx - 1].indexOf(array[idx - 1].match(YAML_KEY_PATTERN));
+          }
+          result += leftPad(pad) + line.replace(YAML_COMMENT_PATTERN, '$comment_' + idx + ': ') + '\n';
+        } else {
+          result += line + '\n';
+        }
+      }, result);
+      $scope.data = jsyaml.safeLoad(result);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+}
+</script>
+
+<div ng-app="app">
+  <div ng-controller="MainController">
+    <pre>{{data | json}}</pre>
+    <button ng-click="parse()">Parse YAML</button>
+    <div id="editor"></div>
+  </div>
+</div>

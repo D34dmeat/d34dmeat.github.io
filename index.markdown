@@ -11,7 +11,7 @@ layout: home
 
 {% for cat in site.pages | where category %}
 {{ cat.category }}
-{% for page in site.category %}
+{% for page in site.pages.category %}
 [{{ page.title }}]({{ page.url}})
 {%endfor%}
 {%endfor%}

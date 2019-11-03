@@ -1,7 +1,7 @@
 -post: 
   name: "bingen"
   data: bcv
-     -members:
+     members:
        name: bengt
        desc: greedy bastard
        

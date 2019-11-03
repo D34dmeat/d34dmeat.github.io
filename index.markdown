@@ -9,11 +9,11 @@ layout: home
 [about](/about/)
 
 
-{% for cat in site.categories %}
+{% for cat in site.pages | where categories %}
 
 
-{{cat.categories}}
-{% for page in site.pages | where categories = cat.category%}
+
+{% for page in site.pages | where categories = cat.categories%}
 {{ page.categories }}
 [{{ page.title }}]({{ page.url}})
 {%endfor%}

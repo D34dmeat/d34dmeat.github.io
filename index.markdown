@@ -10,3 +10,13 @@ layout: page
 
 
 ## welcome
+
+{% for page in  site.pages %}
+{% if page.short  %}
+
++ [{{ page.title }}]({{page.url }})
+      {{ page.short }}
+
+    
+{% endif %}
+{%endfor%}
